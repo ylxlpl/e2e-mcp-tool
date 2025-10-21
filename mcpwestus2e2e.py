@@ -180,7 +180,7 @@ def main():
 
     with project_client:
         agents_client = project_client.agents
-        existing_agent = agents_client.get_agent("asst_BwlWn0Uskteq4IIIrT8NmXfk")
+        existing_agent = agents_client.get_agent("{YOUR_AGENT_ID}")
 
         mcp_tool_config = build_mcp_tool_config(
             url=os.environ.get("MCP_SERVER_URL", "https://e2e.azurewebsites.net/api/mcp"),
