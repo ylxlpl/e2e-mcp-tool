@@ -14,7 +14,7 @@ namespace MCPToolWeb
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ILogger<TodosMcpTool> _logger;
 
-        public TodosMcpTool(IHttpContextAccessor httpContextAccessor, GraphServiceClient graphClient, ILogger<TodosMcpTool> logger)
+        public TodosMcpTool(IHttpContextAccessor httpContextAccessor, ILogger<TodosMcpTool> logger)
         {
             _httpContextAccessor = httpContextAccessor;
             _logger = logger;

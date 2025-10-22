@@ -67,10 +67,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddAuthorization();
 builder.Services.AddHttpContextAccessor();
 
-// Graph (app-only). Requires application permissions with admin consent.
-var graphCredential = new DefaultAzureCredential();
-builder.Services.AddSingleton(new GraphServiceClient(graphCredential, new[] { "https://graph.microsoft.com/.default" }));
-
 var aiConn = builder.Configuration["ApplicationInsights:ConnectionString"];
 builder.Logging.AddApplicationInsights(
     configureTelemetryConfiguration: cfg => cfg.ConnectionString = aiConn,
