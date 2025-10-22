@@ -1,0 +1,8 @@
+{
+	"servers": {
+		"my-mcp-server-todo": {
+			"url": "YOUR_MCP_SERVER_URL",
+		}
+	},
+	"inputs": []
+}
